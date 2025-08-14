@@ -27,6 +27,7 @@ button {
     border: 2px solid #4CB538;
     border-radius: 6px;
     padding: 13px 29px 14px 28px;
+    cursor: pointer;
 }
 
 main {
@@ -35,11 +36,14 @@ main {
     align-items: center;
     justify-content: center;
     gap: 60px;
+    flex-wrap: wrap;
 }
 
 .we-ride-logo {
     width: 583.17px;
     height: 374.821px;
+    max-width: 90vw;
+    height: auto;
 }
 
 .hero-text {
@@ -49,6 +53,7 @@ main {
     align-items: start;
     justify-content: center;
     gap: 36px;
+    max-width: 95vw;
 }
 
 h1 {
@@ -62,6 +67,8 @@ h1 {
 
 p {
     width: 70%;
+    min-width: 200px;
+    max-width: 100%;
     color: #4B505A;
     font-size: 18px;
     font-weight: 400;
@@ -73,4 +80,43 @@ p {
     color: #6FBF44;
     font-size: 18px;
     font-weight: 500;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        gap: 32px;
+        margin-top: 60px;
+    }
+    .hero-text {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    p {
+        width: 100%;
+    }
+    .we-ride-logo {
+        width: 90vw;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        gap: 16px;
+        margin: 24px 8px;
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .we-ride-logo {
+        max-width: 90vw;
+    }
+    .hero-text {
+        gap: 20px;
+    }
 }
